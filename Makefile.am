@@ -43,7 +43,7 @@ yara_SOURCES = \
   cli/threading.h \
   cli/yara.c
 
-yara_LDADD = -Llibyara/.libs -lyara
+yara_LDADD = -Llibyara/.libs -lyara -ljansson
 yara_DEPENDENCIES = libyara/.libs/libyara.la
 
 yarac_SOURCES = \
@@ -53,7 +53,7 @@ yarac_SOURCES = \
    cli/common.h \
    cli/yarac.c
 
-yarac_LDADD = -Llibyara/.libs -lyara
+yarac_LDADD = -Llibyara/.libs -lyara -ljansson
 yarac_DEPENDENCIES = libyara/.libs/libyara.la
 
 tests_mapper_SOURCES = tests/mapper.c

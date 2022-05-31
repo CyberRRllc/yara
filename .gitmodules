@@ -1,0 +1,3 @@
+[submodule "libyara/modules/json"]
+	path = libyara/modules/json
+	url = git@github.com:CyberRRllc/yara-json.git
