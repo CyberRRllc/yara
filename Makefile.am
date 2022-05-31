@@ -8,6 +8,7 @@ check:
 MOSTLYCLEANFILES = {cli,tests}/*.gc{no,da,ov}
 AM_CFLAGS+=-O0 -g -ftest-coverage -fprofile-arcs
 
+
 else
 
 if DEBUG
@@ -44,7 +45,7 @@ yara_SOURCES = \
   cli/yara.c
 
 yara_LDADD = -Llibyara/.libs -lyara -ljansson
-yara_DEPENDENCIES = libyara/.libs/libyara.la /usr/lib/x86_64-linux-gnu/libjansson.a
+yara_DEPENDENCIES = libyara/.libs/libyara.la
 
 yarac_SOURCES = \
    cli/args.c \
@@ -54,7 +55,7 @@ yarac_SOURCES = \
    cli/yarac.c
 
 yarac_LDADD = -Llibyara/.libs -lyara -ljansson
-yarac_DEPENDENCIES = libyara/.libs/libyara.la /usr/lib/x86_64-linux-gnu/libjansson.a
+yarac_DEPENDENCIES = libyara/.libs/libyara.la
 
 tests_mapper_SOURCES = tests/mapper.c
 tests_mapper_CFLAGS = -O0
